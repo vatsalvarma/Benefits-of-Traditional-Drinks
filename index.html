@@ -261,7 +261,8 @@ body:has(.nav-item:hover) .nav-blur{
         }
 
        .article img{
-  width:1000px;
+  width:100%;
+  max-width:1000px;
   height:400px;
   object-fit:cover;
   border-radius:20px;
@@ -303,6 +304,85 @@ body:has(.nav-item:hover) .nav-blur{
         font-size:13px;
         opacity:0.7;
         }
+
+        /* =============================
+   MOBILE OPTIMIZATION
+============================= */
+
+@media (max-width: 768px){
+
+    body{
+        padding-top:80px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    /* NAVBAR */
+    .navbar{
+        padding:12px 20px;
+        border-radius:30px;
+    }
+
+    .logo img{
+        width:32px;
+    }
+
+    .nav-links{
+        display:none; /* hide desktop menu */
+    }
+
+    /* Optional: simple mobile menu button */
+    .menu-toggle{
+        display:block;
+        font-size:22px;
+        cursor:pointer;
+    }
+
+    /* ARTICLE */
+    .article{
+        padding:40px 0;
+    }
+
+    .article h1{
+        font-size:26px;
+        line-height:1.3;
+        margin-bottom:20px;
+    }
+
+    .article img{
+        width:100%;       /* FIXED */
+        height:220px;     /* smaller height */
+        border-radius:14px;
+    }
+
+    .article p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    /* CONTACT FORM */
+    .contact-form{
+        width:90%;
+        padding:25px;
+    }
+
+    /* FOOTER */
+    .footer{
+        padding:40px 0;
+    }
+
+    .footer-cols{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .copyright{
+        font-size:12px;
+    }
+}
 
     </style>
 </head>
